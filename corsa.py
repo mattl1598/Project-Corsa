@@ -12,7 +12,7 @@
 #
 # Created:     21/02/2018
 # Copyright:   (c) matthewl9 2018
-# Licence:     <your licence>
+# Licence:     MIT (see included)
 #-------------------------------------------------------------------------------
 class stack():
 	"""absolute pile of shite, do not use,
