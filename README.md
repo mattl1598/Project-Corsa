@@ -1,2 +1,2 @@
-# Project-Corsa
-collection of random, superb algorithms
+# Project Corha
+collection of random, helpful algorithms
