@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="corha",
-    version="0.1.0",
+    version="0.3.1",
     description="Collection Of Random Helpful Algorithms",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -23,5 +23,8 @@ setup(
         "Programming Language :: Python :: 3.8",
     ],
     packages=["corha"],
-    include_package_data=True
+    include_package_data=True,
+    install_requires=[
+        'dotmap>=1.3.23'
+    ]
 )

@@ -1,3 +1,31 @@
+import json
+from dotmap import DotMap
+import base64
+import hashlib
+import string
+
+
+def rand_string(seed, length, used=[]):
+	matches = True
+	while matches:
+		output = str(
+			base64.urlsafe_b64encode(
+				hashlib.md5(str(seed).encode('utf-8')).digest()),
+			'utf-8'
+		).rstrip(string.punctuation)[0:length-1]
+		seed = seed + "1"
+		matches = output in used
+
+	return output
+
+
+def credentials_loader(file):
+	with open(file, "r") as fp:
+		creds = DotMap(json.load(fp))
+
+	return creds
+
+
 class Stack:
 	"""absolute pile of shite, do not use,
 	use python lists instead
